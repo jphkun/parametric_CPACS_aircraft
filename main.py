@@ -192,7 +192,7 @@ def main():
     # [-] sweep angle in degrees. aft if negative
     sweep = 30
     # [-] diheadral angle in degree - anhedral if negative
-    diheadral = 5
+    diheadral = 10
     # [m] root chord
     root_c = 0.3
     # [m] tip chord
@@ -236,7 +236,7 @@ def main():
         # Uploads tixi handel information into tigl information
         mgr = tigl3.configuration.CCPACSConfigurationManager_get_instance()
         aircraft = mgr.get_configuration(tigl_h._handle.value)
-        cst2 = np.linspace(0,0.5,len(names))
+        cst2 = 0.5*np.ones(len(names)) # np.linspace(0,0.5,len(names))
 
         filename = names[i] + ".xml"
         wing_builder(span,
