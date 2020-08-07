@@ -28,7 +28,6 @@ from tigl3 import geometry
 # from ctypes import *
 # from genAircraft.__version__ import __version__
 
-
 logging.basicConfig(level=logging.DEBUG)
 __prog_name__ = 'gen_CPACS_Aircraft'
 logger = logging.getLogger(__prog_name__+"."+__name__)
@@ -119,47 +118,74 @@ def wing_builder(span,
                  tixi_h):
     # Uploads instance for ease of use
     wings = aircraft.get_wings()
-    # fuselages = aircraft.get_fuselages()
+    # nWingSections = nWingSections+1
 
     # Creates new wing
     newWingUid = "Wing_1"
     wings.create_wing(newWingUid, nWingSections, naca_profile)
     wing = wings.get_wing(newWingUid)
-    line = np.linspace(0,span/2,10*nWingSections)
-    wing_clx = np.zeros(10*nWingSections)
-    wing_cly = np.zeros(10*nWingSections)
-    wing_clz = np.zeros(10*nWingSections)
+    # Number of virtual subsections
+    N = 10
+    lineOg = np.linspace(0,span/2,nWingSections)
+    lineMod = np.linspace(0,span/2,N*nWingSections)
+    logger.debug("wing lineOg = \n"+str(lineOg))
+    logger.debug("wing lineMod = \n"+str(lineMod))
 
     # Includes sweep to the points
-    wing_clx = line * np.sin(np.deg2rad(sweep))
-    wing_cly = line * np.cos(np.deg2rad(sweep))
-
+    wing_Mod_clx = lineMod * np.sin(np.deg2rad(sweep))
+    wing_Og_clx = lineOg * np.sin(np.deg2rad(sweep))
+    wing_Mod_cly = lineMod * np.cos(np.deg2rad(sweep))
+    wing_Og_cly = lineOg * np.cos(np.deg2rad(sweep))
     # Includes diheadral to the points
-    wing_clz = line * np.sin(np.deg2rad(diheadral))
-    delta_c = (root_c - tip_c)/np.max(line)
-
-    for i in range(1,wing.get_section_count()+1):
+    wing_Mod_clz = lineMod * np.sin(np.deg2rad(diheadral))
+    wing_Og_clz = lineOg * np.sin(np.deg2rad(diheadral))
+    logger.debug("wing_Mod_clx = \n"+str(wing_Mod_clx))
+    logger.debug("wing_Og_clx = \n"+str(wing_Og_clx))
+    logger.debug("wing_Mod_cly = \n"+str(wing_Mod_cly))
+    logger.debug("wing_Og_cly = \n"+str(wing_Og_cly))
+    logger.debug("wing_Mod_clz = \n"+str(wing_Mod_clz))
+    logger.debug("wing_Og_clz = \n"+str(wing_Og_clz))
+    
+    # how much chord length is changed for each point in the line
+    delta_Mod_c = (root_c - tip_c)/np.max(lineMod)
+    delta_Og_c = (root_c - tip_c)/np.max(lineOg)
+    for i in range(0,wing.get_section_count()):
+        logger.debug("i = "+str(i))
         # Position on the wing
-        x1 = wing_clx[10*(i-1)]
-        y1 = wing_cly[10*(i-1)]
-        z1 = wing_clz[10*(i-1)]
-        x0 = wing_clx[10*(i-1)-1]
-        y0 = wing_cly[10*(i-1)-1]
-        z0 = wing_clz[10*(i-1)-1]
+        x1 = wing_Og_clx[i]
+        y1 = wing_Og_cly[i]
+        z1 = wing_Og_clz[i]
+
+        logger.debug("x1 = "+str(x1))
+        logger.debug("y1 = "+str(y1))
+        logger.debug("z1 = "+str(z1))
+    
+        # x0 = wing_clx[index] # 0 et 9
+        # y0 = wing_cly[index]
+        # z0 = wing_clz[index]
 
         # Position derivatives
-        dx1 = x1 - x0
-        dy1 = y1 - y0
-        dz1 = z1 - z0
+        if i == N:
+            index = 10*(i-1)+9
+        else:
+            index = i
+        dx1 = wing_Mod_clx[index] - wing_Mod_clx[index-1]
+        dy1 = wing_Mod_cly[index] - wing_Mod_cly[index-1]
+        dz1 = wing_Mod_clz[index] + cst2*wing_Mod_cly[index]**2 - \
+              wing_Mod_clz[index-1]+cst2*wing_Mod_cly[index]**2
 
         # normal vector for quadratic deformation
-        dz2 = (z1 + cst2*y1**2) - (z0 + cst2*y0**2)
+        # dz2 = (z1 + cst2*y1**2) - (z0 + cst2*y0**2)
 
         # Wing scaling factor
-        s_factor = root_c - delta_c * line[10*(i-1)]
+        s_factor = root_c - delta_Og_c * lineOg[i]
 
         # Decompose section in workables items
-        segment = wing.get_section(i)
+        # if i == 0:
+        #     sectionNumber = 1
+        # else:
+        #     sectionNumber = i+1
+        segment = wing.get_section(i+1)
         element = segment.get_section_element(1)
         sec_el = element.get_ctigl_section_element()
 
@@ -172,9 +198,9 @@ def wing_builder(span,
         element.set_scaling(scale)
         sec_el.set_center(centr)
 
-        if i != 1:
+        if i != 0:
             centr = geometry.CTiglPoint(x1, y1, z1 + cst2*y1**2)
-            normal_vec = geometry.CTiglPoint(0,-dy1,-dz2)
+            normal_vec = geometry.CTiglPoint(0,-dy1,-dz1)
             sec_el.set_center(centr)
             sec_el.set_normal(normal_vec)
 
@@ -182,23 +208,23 @@ def wing_builder(span,
 
 
 def main():
-    names = ["01_EbeeX","02_EbeeX","03_EbeeX","04_EbeeX","05_EbeeX"]
+    names = ["straightWing"]
 
     logger.info("Program started")
 
     # Aircraft variables
     # [m] Wing span
-    span = 1.1
+    span = 0.9
     # [-] sweep angle in degrees. aft if negative
     sweep = 30
     # [-] diheadral angle in degree - anhedral if negative
     diheadral = 5
     # [m] root chord
-    root_c = 0.3
+    root_c = 0.25
     # [m] tip chord
     tip_c = 0.2
     # Airfoil profile
-    naca_profile = "NACA 2218"
+    naca_profile = "NACA 2412"
     # Number of wing sections
     nWingSections = 10
 
@@ -237,7 +263,7 @@ def main():
         mgr = tigl3.configuration.CCPACSConfigurationManager_get_instance()
         aircraft = mgr.get_configuration(tigl_h._handle.value)
         cst2 = np.linspace(0,0.5,len(names))
-
+        cst2 = [0.1]
         filename = names[i] + ".xml"
         wing_builder(span,
                      root_c,
