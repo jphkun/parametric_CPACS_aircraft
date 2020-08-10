@@ -6,7 +6,11 @@
     <cpacsVersion>3.0</cpacsVersion>
     <creator>Jean-Philippe Kuntzer</creator>
     <description>Test for aeroelatic deformation</description>
+<<<<<<< HEAD
     <timestamp>2020-07-17T15:31:13</timestamp>
+=======
+    <timestamp>2020-07-19T21:33:09</timestamp>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
   </header>
   <vehicles>
     <aircraft>
@@ -96,8 +100,13 @@
                     <z>0.289899</z>
                   </scaling>
                   <rotation uID="Wing_1Sec2TrRot">
-                    <x>7.68389</x>
+<<<<<<< HEAD
+                    <x>7.03994</x>
                     <y>8.53774e-07</y>
+=======
+                    <x>13.8321</x>
+                    <y>0</y>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec2TrTransl">
@@ -139,8 +148,13 @@
                     <z>0.279798</z>
                   </scaling>
                   <rotation uID="Wing_1Sec3TrRot">
-                    <x>9.70391</x>
-                    <y>-8.53774e-07</y>
+<<<<<<< HEAD
+                    <x>8.39335</x>
+                    <y>0</y>
+=======
+                    <x>16.4008</x>
+                    <y>8.53774e-07</y>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec3TrTransl">
@@ -182,8 +196,12 @@
                     <z>0.269697</z>
                   </scaling>
                   <rotation uID="Wing_1Sec4TrRot">
-                    <x>11.6999</x>
-                    <y>0</y>
+<<<<<<< HEAD
+                    <x>9.73738</x>
+=======
+                    <x>18.9034</x>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
+                    <y>8.53774e-07</y>
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec4TrTransl">
@@ -225,8 +243,13 @@
                     <z>0.259596</z>
                   </scaling>
                   <rotation uID="Wing_1Sec5TrRot">
-                    <x>13.6675</x>
+<<<<<<< HEAD
+                    <x>11.0707</x>
                     <y>0</y>
+=======
+                    <x>21.3334</x>
+                    <y>8.53774e-07</y>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec5TrTransl">
@@ -268,8 +291,12 @@
                     <z>0.249495</z>
                   </scaling>
                   <rotation uID="Wing_1Sec6TrRot">
-                    <x>15.6027</x>
-                    <y>8.53774e-07</y>
+<<<<<<< HEAD
+                    <x>12.392</x>
+=======
+                    <x>23.6856</x>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
+                    <y>0</y>
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec6TrTransl">
@@ -311,8 +338,13 @@
                     <z>0.239394</z>
                   </scaling>
                   <rotation uID="Wing_1Sec7TrRot">
-                    <x>17.5022</x>
+<<<<<<< HEAD
+                    <x>13.7</x>
                     <y>0</y>
+=======
+                    <x>25.9559</x>
+                    <y>8.53774e-07</y>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec7TrTransl">
@@ -354,8 +386,12 @@
                     <z>0.229293</z>
                   </scaling>
                   <rotation uID="Wing_1Sec8TrRot">
-                    <x>19.3628</x>
-                    <y>8.53774e-07</y>
+<<<<<<< HEAD
+                    <x>14.9936</x>
+=======
+                    <x>28.142</x>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
+                    <y>0</y>
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec8TrTransl">
@@ -397,8 +433,13 @@
                     <z>0.219192</z>
                   </scaling>
                   <rotation uID="Wing_1Sec9TrRot">
-                    <x>21.1818</x>
+<<<<<<< HEAD
+                    <x>16.2718</x>
+                    <y>0</y>
+=======
+                    <x>30.2425</x>
                     <y>8.53774e-07</y>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec9TrTransl">
@@ -440,8 +481,12 @@
                     <z>0.209091</z>
                   </scaling>
                   <rotation uID="Wing_1Sec10TrRot">
-                    <x>22.9572</x>
-                    <y>-8.53774e-07</y>
+<<<<<<< HEAD
+                    <x>17.5335</x>
+=======
+                    <x>32.2568</x>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
+                    <y>0</y>
                     <z>0</z>
                   </rotation>
                   <translation uID="Wing_1Sec10TrTransl">
@@ -486,73 +531,127 @@
               </positioning>
               <positioning uID="Wing_1Sec2GenPos">
                 <name></name>
-                <length>0.0589006</length>
-                <sweepAngle>33.7242</sweepAngle>
-                <dihedralAngle>6.89501</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0588359</length>
+                <sweepAngle>33.7662</sweepAngle>
+                <dihedralAngle>6.55809</dihedralAngle>
+=======
+                <length>0.0599755</length>
+                <sweepAngle>33.0414</sweepAngle>
+                <dihedralAngle>12.7009</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec1</fromSectionUID>
                 <toSectionUID>Wing_1Sec2</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec3GenPos">
                 <name></name>
-                <length>0.0587611</length>
-                <sweepAngle>33.815</sweepAngle>
-                <dihedralAngle>8.95693</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.05862</length>
+                <sweepAngle>33.9074</sweepAngle>
+                <dihedralAngle>7.94545</dihedralAngle>
+=======
+                <length>0.0597791</length>
+                <sweepAngle>33.1639</sweepAngle>
+                <dihedralAngle>15.4079</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec2</fromSectionUID>
                 <toSectionUID>Wing_1Sec3</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec4GenPos">
                 <name></name>
-                <length>0.0590016</length>
-                <sweepAngle>33.6587</sweepAngle>
-                <dihedralAngle>10.9634</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0587582</length>
+                <sweepAngle>33.8169</sweepAngle>
+                <dihedralAngle>9.29334</dihedralAngle>
+=======
+                <length>0.0603226</length>
+                <sweepAngle>32.8272</sweepAngle>
+                <dihedralAngle>17.9392</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec3</fromSectionUID>
                 <toSectionUID>Wing_1Sec4</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec5GenPos">
                 <name></name>
-                <length>0.059292</length>
-                <sweepAngle>33.4721</sweepAngle>
-                <dihedralAngle>12.9431</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0589189</length>
+                <sweepAngle>33.7123</sweepAngle>
+                <dihedralAngle>10.631</dihedralAngle>
+=======
+                <length>0.0609491</length>
+                <sweepAngle>32.4481</sweepAngle>
+                <dihedralAngle>20.4004</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec4</fromSectionUID>
                 <toSectionUID>Wing_1Sec5</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec6GenPos">
                 <name></name>
-                <length>0.0596314</length>
-                <sweepAngle>33.2567</sweepAngle>
-                <dihedralAngle>14.8921</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0591017</length>
+                <sweepAngle>33.5941</sweepAngle>
+                <dihedralAngle>11.9572</dihedralAngle>
+=======
+                <length>0.0616562</length>
+                <sweepAngle>32.0313</sweepAngle>
+                <dihedralAngle>22.7857</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec5</fromSectionUID>
                 <toSectionUID>Wing_1Sec6</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec7GenPos">
                 <name></name>
-                <length>0.0600191</length>
-                <sweepAngle>33.0143</sweepAngle>
-                <dihedralAngle>16.8067</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0593066</length>
+                <sweepAngle>33.4628</sweepAngle>
+                <dihedralAngle>13.2705</dihedralAngle>
+=======
+                <length>0.0624412</length>
+                <sweepAngle>31.5817</sweepAngle>
+                <dihedralAngle>25.0908</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec6</fromSectionUID>
                 <toSectionUID>Wing_1Sec7</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec8GenPos">
                 <name></name>
-                <length>0.0604542</length>
-                <sweepAngle>32.7468</sweepAngle>
-                <dihedralAngle>18.6836</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0595332</length>
+                <sweepAngle>33.3187</sweepAngle>
+                <dihedralAngle>14.5699</dihedralAngle>
+=======
+                <length>0.0633012</length>
+                <sweepAngle>31.1044</sweepAngle>
+                <dihedralAngle>27.3124</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec7</fromSectionUID>
                 <toSectionUID>Wing_1Sec8</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec9GenPos">
                 <name></name>
-                <length>0.0609357</length>
-                <sweepAngle>32.4561</sweepAngle>
-                <dihedralAngle>20.5199</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.0597815</length>
+                <sweepAngle>33.1624</sweepAngle>
+                <dihedralAngle>15.8542</dihedralAngle>
+=======
+                <length>0.0642333</length>
+                <sweepAngle>30.6041</sweepAngle>
+                <dihedralAngle>29.4486</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec8</fromSectionUID>
                 <toSectionUID>Wing_1Sec9</toSectionUID>
               </positioning>
               <positioning uID="Wing_1Sec10GenPos">
                 <name></name>
-                <length>0.0614625</length>
-                <sweepAngle>32.1443</sweepAngle>
-                <dihedralAngle>22.3134</dihedralAngle>
+<<<<<<< HEAD
+                <length>0.060051</length>
+                <sweepAngle>32.9946</sweepAngle>
+                <dihedralAngle>17.1225</dihedralAngle>
+=======
+                <length>0.0652343</length>
+                <sweepAngle>30.0854</sweepAngle>
+                <dihedralAngle>31.4988</dihedralAngle>
+>>>>>>> 4f8a805dc435fd50f9af90e2a230fb793d2a4c59
                 <fromSectionUID>Wing_1Sec9</fromSectionUID>
                 <toSectionUID>Wing_1Sec10</toSectionUID>
               </positioning>

@@ -1,0 +1,8 @@
+libpng warning: bKGD: invalid
+libpng warning: bKGD: invalid
+libpng warning: bKGD: invalid
+libpng warning: bKGD: invalid
+Error: Unable to open file "/users/disk9/cfse2/Documents/parametric_CPACS_aircraft/straightWing.xml".
+QFSFileEngine::open: No file name specified
+QFSFileEngine::open: No file name specified
+QXcbConnection: XCB error: 3 (BadWindow), sequence: 42941, resource id: 35886315, major code: 40 (TranslateCoords), minor code: 0
