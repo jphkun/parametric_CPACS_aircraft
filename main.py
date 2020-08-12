@@ -285,9 +285,9 @@ def pointsWingType2():
     N1 = 2
     N2 = 5
     N3 = 2
-    theta = 5
-    alpha = -10
-    x1,y1,z1,nx1,ny1,nz1,chrods1 = f1(y0,y1,N1,theta,alpha,0.2,0.15)
+    theta = 0
+    alpha = 0
+    x1,y1,z1,nx1,ny1,nz1,chrods1 = f1(y0,y1,N1,theta,alpha,0.2,0.2)
     # x2,y2,z2,nx2,ny2,nz2,chrods2,cy,cz = f2(y1[-1],z1[-1],0.02,theta,alpha,N2,0.15,0.08)
     # x3,y3,z3,nx3,ny3,nz3,chrods3 = f3(y2[-1],z2[-1],0.02,alpha,N3,0.08,0.07)
 
@@ -375,12 +375,12 @@ def main():
     # [m] tip chord
     tip_c = 0.15
     # Airfoil profile
-    naca_profile = "NACA 6412"
+    naca_profile = "NACA 4422"
     # Number of wing sections
     nWingSections = 2
 
     # CPACS variables
-    aircraft_name = "EbeeX"
+    aircraft_name = "FlyingWing"
     creator = "Jean-Philippe Kuntzer"
     version = "1"
     description = "Test for aeroelatic deformation"
