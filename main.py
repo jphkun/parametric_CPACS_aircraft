@@ -365,17 +365,17 @@ def main():
 
     # Aircraft variables
     # [m] Wing span
-    span = 1.0
+    span = 50.0
     # [-] sweep angle in degrees. aft if negative
     sweep = 0
     # [-] diheadral angle in degree - anhedral if negative
-    diheadral = 5
+    diheadral = 0
     # [m] root chord
-    root_c = 0.22
+    root_c = 20
     # [m] tip chord
-    tip_c = 0.15
+    tip_c = 20
     # Airfoil profile
-    naca_profile = "NACA 4422"
+    naca_profile = "NACA 2412"
     # Number of wing sections
     nWingSections = 2
 
